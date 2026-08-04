@@ -59,3 +59,5 @@ This repository chronicles my journey through data analytics, including:
 - leave from branch - git checkout branch name
 - create new branch - git checkout -b new branch name
 - delete branch - git branch -d branch name
+- automation program is now working
+

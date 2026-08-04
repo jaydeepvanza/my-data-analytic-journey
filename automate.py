@@ -22,7 +22,10 @@ def commit_push():
   print("your file commited successfully")
   subprocess.run(["git","push","origin","main"], check=True)
   # you can change this line if your branch & repo name are different
-  print("your file push to github successfully")
+  try:
+     print("your file push to github successfully")
+  except subprocess.CalledProcessError:
+   print("Push Failed")   
  #subprocess.run(["git","pull"],check=True)
  #print("your data pull successfully to your local file")
 
