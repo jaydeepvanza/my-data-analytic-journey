@@ -47,3 +47,8 @@ This repository chronicles my journey through data analytics, including:
 - modified- change in file
 - staged - file is ready to commit
 - unmodified -unchanged
+# add & commit & push
+- git add . to add all files
+- git add "filename" add only this file
+- git commit -m"add any comment"
+- git push origin main
