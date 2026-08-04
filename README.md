@@ -52,3 +52,6 @@ This repository chronicles my journey through data analytics, including:
 - git add "filename" add only this file
 - git commit -m"add any comment"
 - git push origin main
+ 
+ can i automate this task
+ 
