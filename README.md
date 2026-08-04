@@ -40,3 +40,10 @@ This repository chronicles my journey through data analytics, including:
 - Practice exploratory data analysis
 - Build visualizations and reports
 - Develop a portfolio of analytics projects
+# to change directory or branch
+- cd give path "we can use tab for autocomplete"
+# file status in git
+- untracked - new file than git doesn't track
+- modified- change in file
+- staged - file is ready to commit
+- unmodified -unchanged
