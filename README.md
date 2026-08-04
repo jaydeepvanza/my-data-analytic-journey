@@ -51,4 +51,11 @@ This repository chronicles my journey through data analytics, including:
 - git add . to add all files
 - git add "filename" add only this file
 - git commit -m"add any comment"
-- git push origin main
+- git push origin main ( git push -u origin main "sfter this we only type git push this work on only selected repo) 
+- see all file in folder ls -a
+# create branch
+- check branch - git branch
+- rename -git branch -M main
+- leave from branch - git checkout branch name
+- create new branch - git checkout -b new branch name
+- delete branch - git branch -d branch name
