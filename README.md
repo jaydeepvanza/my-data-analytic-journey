@@ -53,5 +53,10 @@ This repository chronicles my journey through data analytics, including:
 - git commit -m"add any comment"
 - git push origin main
  
- can i automate this task
- 
+# create branch
+-
+-
+-
+-
+-
+- marge branch from git hub
