@@ -8,27 +8,33 @@ def add():
    file = input("enter file name").lower()
    subprocess.run(["git","add", file],check=True)
    print(f"{file} added successfully")
+   return True
   elif option =="all": 
    subprocess.run(["git","add","."],check=True)
    print("all file added successfully")
+   return True
   else :
    print("invelid option")
+   return False
  else:
   print("file not added") 
+  return False
 
 def commit_push():
   messgge = input("enter your commitment messgae")
   subprocess.run(["git","commit","-m",messgge],check=True)
   print("your file commited successfully")
-  subprocess.run(["git","push","origin","main"], check=True)
-  # you can change this line if your branch & repo name are different
   try:
-     print("your file push to github successfully")
+   subprocess.run(["git","push","origin","main"], check=True)
+  # you can change this line if your branch & repo name are different
+   print("your file push to github successfully")
   except subprocess.CalledProcessError:
    print("Push Failed")   
  #subprocess.run(["git","pull"],check=True)
  #print("your data pull successfully to your local file")
 
 
-add()
-commit_push()
+if add():
+       commit_push()
+else :
+  print("no add , commit and push")
