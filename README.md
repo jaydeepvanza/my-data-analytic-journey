@@ -72,7 +72,7 @@ This repository chronicles my journey through data analytics, including:
 -- drop table worker;
 -- drop view employees_with_same_manager;
 ------------------------------
- create table student (
+ <p>create table student (
  student_id int primary key auto_increment,
  first_name varchar(20),
  last_name varchar(20),
@@ -147,4 +147,4 @@ value (01,'computer',10005.5,1,'only electric');
 select * from product;
 insert into product 
 value (02,'computer',10005.5,1,'clothing');
-
+</p>
