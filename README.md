@@ -116,3 +116,26 @@ drop index email_2;
 - TRUNCATE TABLE doctors; - clear data only keep formate of table;
 - RENAME TABLE doctors TO doctor_details;
 - Constraints (PRIMARY KEY, FOREIGN KEY, UNIQUE, NOT NULL, CHECK, DEFAULT)
+-ALTER TABLE doctor MODIFY COLUMN Salary DECIMAL(10,2) AFTER Doctor_name; (BEFORE is not supported in    mysql)
+- **when we  use primary key unique constraint it create an index**
+- we want to remove this use "show index from tablename" to see all index
+- than use "alter table tablename drop index indexname" index name is also column name
+
+# add foreign key after table creation 
+- **ALTER TABLE appointments
+ADD CONSTRAINT fk_appointments_doctor ("fk_appointments_doctor is constraint name you choose your self")
+FOREIGN KEY (Doctor_id)
+REFERENCES doctor(Doctor_id);**
+# cascading behavior
+**elete all appointments automatically when a doctor is deleted:*
+ALTER TABLE appointments
+ADD CONSTRAINT fk_appointments_doctor
+FOREIGN KEY (Doctor_id)
+REFERENCES doctor(Doctor_id)
+ON DELETE CASCADE;
+**set the Doctor_id to NULL when a doctor is deleted:*
+ALTER TABLE appointments
+ADD CONSTRAINT fk_appointments_doctor
+FOREIGN KEY (Doctor_id)
+REFERENCES doctor(Doctor_id)
+ON DELETE SET NULL;
