@@ -67,40 +67,27 @@ This repository chronicles my journey through data analytics, including:
 -- show tables;
 -- drop table emp_new;
 --* we can't drop any table if it connected with any table by foreigh key
--- drop table employee;
--- drop table pramotion;
--- drop table worker;
 -- drop view employees_with_same_manager;
 ------------------------------
+# CREATE TABLE
  <p>create table student (
  student_id int primary key auto_increment,
  first_name varchar(20),
  last_name varchar(20),
  age int,
- gender  enum("male", "female", "other"), * we can also use "gender varchar(10) check( gender IN ("male", "female", "other")
+ gender  enum("male", "female", "other"), * we can also use "gender varchar(10) check( gender IN ("male", "female", "other")- ENUM use where no need to change in future
  city varchar(100),
  admission_date date)
-------------------------------
-  create table employee (
-  empoloyee_id int auto_increment primary key,
-  name varchar(50) not null,
-  salary decimal(10,2),
-  department varchar(20),
-  joining_date date);
-  SHOW FULL TABLES; -- print with type table or view
+- SHOW FULL TABLES; -- print with type table or view
 ---------------------------
-  alter table employee 
-  add column email varchar(60);
-  select * from employee;
--------------------------
-
- insert into employee ( name,salary,department,joining_date,email)
+# INSERT VALUE
+ - insert into employee ( name,salary,department,joining_date,email)
  value(
  "jaydeep",50000,"engineering",'2026-07-01', 'jaydeep@gmail.com');-- by default date formate is yyy-mmm-ddd
 - you insert data in same formate of table than don't need to specity column 
 insert into employee 
 value(
-2,"jaydeep",50100,"engineering",'2026-07-01', 'jaydeep1@gmail.com');
+ 2,"jaydeep",50100,"engineering",'2026-07-01', 'jaydeep1@gmail.com');
 - delete perticular row
 delete from employee
 where empoloyee_id =2 ;
@@ -109,8 +96,6 @@ where empoloyee_id =2 ;
 alter table employee
 modify	column email varchar(60) unique;
 
-alter table employee
-add column phone_number bigint ;
 - it create duplicate index so we need to drop it
 alter table employee
 modify column	email varchar(50) unique;
@@ -119,32 +104,15 @@ SHOW INDEX FROM employee;
 alter table employee
 drop index email_2;
 
--If the column is already unique and you only want to change its size
+-If the column is already exist and you only want to change its size
 
-alter table employee
-modify column email varchar(50);
+ - alter table employee modify column email varchar(50); 
 
 - rename column
-alter table student
-rename column first_name to fname;
-select * from student;
-
-alter table employee
-drop column phone_number;
-
-
-create table product (
-product_id INT AUTO_INCREMENT  primary key,
-product_name  varchar(100) not null,
-price decimal(10,2) CHECK (price >0),
-quantity int default 0,
-category enum("only electric","grocery","clothing")
-);
-
-insert into product 
-value (01,'computer',10005.5,1,'only electric');
-
-select * from product;
-insert into product 
-value (02,'computer',10005.5,1,'clothing');
-</p>
+-  alter table student rename column first_name to fname;
+- alter table employee add column email varchar(60);
+- ALTER TABLE doctors MODIFY Salary DECIMAL(12,2);
+- ALTER TABLE doctors DROP COLUMN Doctor_salary;
+- TRUNCATE TABLE doctors; - clear data only keep formate of table;
+- RENAME TABLE doctors TO doctor_details;
+- Constraints (PRIMARY KEY, FOREIGN KEY, UNIQUE, NOT NULL, CHECK, DEFAULT)
