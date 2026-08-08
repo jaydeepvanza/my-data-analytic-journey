@@ -70,7 +70,7 @@ This repository chronicles my journey through data analytics, including:
 -- drop view employees_with_same_manager;
 ------------------------------
 # CREATE TABLE
- <p>create table student (
+ <p>create table student 
  student_id int primary key auto_increment,
  first_name varchar(20),
  last_name varchar(20),
@@ -139,3 +139,11 @@ ADD CONSTRAINT fk_appointments_doctor
 FOREIGN KEY (Doctor_id)
 REFERENCES doctor(Doctor_id)
 ON DELETE SET NULL;
+
+## if dats is srt formate than convert it into date formate afer date related function run
+SELECT
+    DAYNAME(STR_TO_DATE(order_date, '%d-%m-%Y')) AS order_day,
+    COUNT(DISTINCT order_id) AS total_order
+FROM pizza_sales
+GROUP BY order_day
+ORDER BY total_order DESC;
