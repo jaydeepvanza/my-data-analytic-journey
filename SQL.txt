@@ -1,0 +1,211 @@
+Here's the SQL roadmap grouped by modules.
+
+Module 1: DDL (Data Definition Language) ✅
+
+Purpose: Create and modify database structure.
+
+Topics:
+
+CREATE DATABASE
+USE
+CREATE TABLE
+ALTER TABLE
+DROP TABLE
+TRUNCATE TABLE
+RENAME TABLE
+Constraints:
+PRIMARY KEY
+FOREIGN KEY
+NOT NULL
+UNIQUE
+DEFAULT
+CHECK
+AUTO_INCREMENT
+
+Status: ✅ You've completed this module.
+
+Module 2: DML (Data Manipulation Language)
+
+Purpose: Add, modify, and remove data.
+
+Topics:
+
+INSERT
+UPDATE
+DELETE
+
+Practice:
+
+Insert single row
+Insert multiple rows
+Update one row
+Update multiple rows
+Delete one row
+Delete using conditions
+Module 3: DQL (Data Query Language)
+
+Purpose: Retrieve data.
+
+Topics:
+
+SELECT
+DISTINCT
+WHERE
+AND
+OR
+NOT
+IN
+BETWEEN
+LIKE
+IS NULL
+LIMIT
+ORDER BY
+Module 4: SQL Functions
+
+Purpose: Work with data.
+
+Aggregate Functions
+
+COUNT()
+SUM()
+AVG()
+MIN()
+MAX()
+
+String Functions
+
+UPPER()
+LOWER()
+LENGTH()
+CONCAT()
+SUBSTRING()
+TRIM()
+
+Numeric Functions
+
+ROUND()
+CEIL()
+FLOOR()
+MOD()
+
+Date Functions
+
+CURDATE()
+NOW()
+DATEDIFF()
+DATE_ADD()
+DATE_SUB()
+Module 5: Grouping
+
+Purpose: Summarize data.
+
+Topics:
+
+GROUP BY
+HAVING
+
+Practice:
+
+Total salary by department
+Average marks by class
+Count students by city
+Module 6: Joins ⭐ (Very Important)
+
+Purpose: Combine multiple tables.
+
+Topics:
+
+INNER JOIN
+LEFT JOIN
+RIGHT JOIN
+CROSS JOIN
+SELF JOIN
+
+Practice:
+
+Customer → Orders
+Orders → Products
+Students → Courses
+Module 7: Subqueries
+
+Purpose: Write queries inside queries.
+
+Topics:
+
+Single-row subquery
+Multi-row subquery
+Correlated subquery
+Nested subquery
+Module 8: Views
+
+Purpose: Save complex queries.
+
+Topics:
+
+CREATE VIEW
+ALTER VIEW
+DROP VIEW
+Module 9: TCL (Transaction Control Language)
+
+Topics:
+
+COMMIT
+ROLLBACK
+SAVEPOINT
+Module 10: DCL (Data Control Language)
+
+Topics:
+
+GRANT
+REVOKE
+Module 11: Stored Programs (Advanced)
+
+Topics:
+
+Stored Procedures
+Functions
+Triggers
+Events
+Module 12: Advanced SQL
+
+Topics:
+
+Common Table Expressions (CTEs)
+Recursive CTEs
+Window Functions
+ROW_NUMBER()
+RANK()
+DENSE_RANK()
+LEAD()
+LAG()
+Indexes
+Query Optimization
+Recommended Learning Order
+Module	Topic	Priority
+✅ 1	DDL	Done
+2	DML	⭐⭐⭐⭐⭐
+3	DQL	⭐⭐⭐⭐⭐
+4	SQL Functions	⭐⭐⭐⭐
+5	GROUP BY & HAVING	⭐⭐⭐⭐
+6	JOINS	⭐⭐⭐⭐⭐
+7	Subqueries	⭐⭐⭐⭐
+8	Views	⭐⭐⭐
+9	TCL	⭐⭐⭐
+10	DCL	⭐⭐
+11	Stored Procedures & Triggers	⭐⭐⭐
+12	Advanced SQL	⭐⭐⭐⭐⭐
+
+
+
+SELECT
+    employee_name,
+    department,
+    salary,
+    CASE
+        WHEN department = 'IT' AND salary >= 60000 THEN 'IT Senior'
+        WHEN department = 'IT' THEN 'IT Junior'
+        WHEN department = 'HR' AND salary >= 50000 THEN 'HR Senior'
+        WHEN department = 'HR' THEN 'HR Junior'
+        ELSE 'Other'
+    END AS category
+FROM employee;
