@@ -3,98 +3,97 @@
 ## Q.2 Inside the 'music_streaming_app' database, create a table called 'playlists' with columns: playlist_id (integer, primary key), name (varchar), and created_by (varchar).
 - USE music_streaming_app;
 
-- CREATE TABLE playlist (
+``` CREATE TABLE playlist (
      playlist_id INT AUTO_INCREMENT PRIMARY KEY,
      name VARCHAR(50) NOT NULL,
      created_by VARCHAR(50) NOT NULL);
-
+```
 ## Q.3 Insert three sample rows into the 'playlists' table representing playlists like 'Bollywood Hits', 'Chill Vibes', and 'Workout Mix', each created by a different user.
-- INSERT INTO playlist (playlist_id,name,created_by) 
+``` INSERT INTO playlist (playlist_id,name,created_by) 
      VALUES ( NULL ,'Bollywood Hits','jaydeep'),
      (NULL,'Chill Vibes','kuldeep'),
      (NULL, 'Workout Mix','rajdeep' );
-
+```
 ## Q.4 Write an SQL SELECT query to display all playlists created by the user 'anyone_name' from the 'playlists' 
 
-- SELECT name , created_by FROM playlist WHERE created_by = 'jaydeep';
+``` SELECT name , created_by FROM playlist WHERE created_by = 'jaydeep'; ```
 ## Q.5 Open ChatGPT or Copilot and ask it to explain the difference between a table, a row, and a column in SQL using an example from a food delivery app like Zomato. Paste the explanation you receive into your assignment.
- 
 - Sure. Think of a SQL database like a digital Excel spreadsheet used by a food-delivery app such as Zomato.
 
-Example: restaurants table
+*** Example:*** restaurants table
 restaurant_id	restaurant_name	city	rating
-101	Pizza Palace	Rajkot	4.5
-102	Spice Hub	Ahmedabad	4.2
-103	Burger Point	Surat	4.0
-1. Table
+-- 101	Pizza Palace	Rajkot	4.5
+   102	Spice Hub	Ahmedabad	4.2
+   103	Burger Point	Surat	4.0
+***1. Table***
 
-A table stores related information in a structured format.
+- A table stores related information in a structured format.
 
-Here, the entire restaurants table contains information about restaurants.
-
+- Here, the entire restaurants table contains information about restaurants.
+```
 CREATE TABLE restaurants (
     restaurant_id INT,
     restaurant_name VARCHAR(100),
     city VARCHAR(50),
     rating DECIMAL(2,1)
-);
+);```
 
-Think of a table = one complete spreadsheet.
+- Think of a table = one complete spreadsheet.
 
-2. Column
+***2. Column**
 
-A column represents one type/category of information.
+- A column represents one type/category of information.
 
-For example:
+- For example:
 
-restaurant_id
-restaurant_name
-city
-rating
+-restaurant_id
+-restaurant_name
+-city
+-rating
 
-Each column has a specific purpose.
+- Each column has a specific purpose.
 
-Column	Meaning
+- Column	Meaning
 restaurant_id	Unique ID of restaurant
 restaurant_name	Restaurant's name
 city	Restaurant's city
 rating	Restaurant rating
 
-Think of a column = one field/attribute.
+- Think of a column = one field/attribute.
 
-3. Row
+***3. Row***
 
-A row represents one complete record.
+- A row represents one complete record.
 
-For example:
+***example:***
 
-101 | Pizza Palace | Rajkot | 4.5
+``` 101 | Pizza Palace | Rajkot | 4.5 ```
 
-This is one row, representing one restaurant.
+- This is one row, representing one restaurant.
 
-Another row:
+- Another row:
 
-102 | Spice Hub | Ahmedabad | 4.2
+- 102 | Spice Hub | Ahmedabad | 4.2
 
-represents another restaurant.
+ -represents another restaurant.
 
-Think of a row = one complete record.
+- Think of a row = one complete record.
 
-Easy way to remember
-TABLE
+- Easy way to remember
+
+
+***TABLE***<br>
+
+├── COLUMN → What information are we storing?<br>
+├── COLUMN → restaurant_name<br>
+├── COLUMN → city<br>
+├── COLUMN → rating<br>
 │
-├── COLUMN → What information are we storing?
-│
-├── COLUMN → restaurant_name
-├── COLUMN → city
-├── COLUMN → rating
-│
-├── ROW → One restaurant's complete information
-├── ROW → Another restaurant's complete information
-└── ROW → Another restaurant's complete information
+├── ROW → One restaurant's complete information<br>
+├── ROW → Another restaurant's complete information<br>
 
-In one sentence:
+-In one sentence:
 
-A table is a collection of related data, a column represents a specific type of data, and a row represents one complete record.
+- A table is a collection of related data, a column represents a specific type of data, and a row represents one complete record.<br>
 
-For a Zomato-style database, you might eventually have separate tables such as restaurants, customers, orders, menu_items, and payments.
+- For a Zomato-style database, you might eventually have separate tables such as restaurants, customers, orders, menu_items, and payments.
