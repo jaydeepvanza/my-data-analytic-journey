@@ -1,5 +1,5 @@
 ## Q.1 create a new database named 'music_streaming_app' using the command line or GUI tool of your choice.
-- CREATE DATABASE music_streaming_app;
+``` CREATE DATABASE music_streaming_app;```
 ## Q.2 Inside the 'music_streaming_app' database, create a table called 'playlists' with columns: playlist_id (integer, primary key), name (varchar), and created_by (varchar).
 - USE music_streaming_app;
 
