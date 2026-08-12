@@ -1,7 +1,7 @@
 ## Q.1 create a new database named 'music_streaming_app' using the command line or GUI tool of your choice.
-``` CREATE DATABASE music_streaming_app;```
+```sql CREATE DATABASE music_streaming_app;```
 ## Q.2 Inside the 'music_streaming_app' database, create a table called 'playlists' with columns: playlist_id (integer, primary key), name (varchar), and created_by (varchar).
-``` USE music_streaming_app;
+```sql USE music_streaming_app;
 
   CREATE TABLE playlist (
      playlist_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -9,14 +9,14 @@
      created_by VARCHAR(50) NOT NULL);
 ```
 ## Q.3 Insert three sample rows into the 'playlists' table representing playlists like 'Bollywood Hits', 'Chill Vibes', and 'Workout Mix', each created by a different user.
-``` INSERT INTO playlist (playlist_id,name,created_by) 
+```sql INSERT INTO playlist (playlist_id,name,created_by) 
      VALUES ( NULL ,'Bollywood Hits','jaydeep'),
      (NULL,'Chill Vibes','kuldeep'),
      (NULL, 'Workout Mix','rajdeep' );
 ```
 ## Q.4 Write an SQL SELECT query to display all playlists created by the user 'anyone_name' from the 'playlists' 
 
-``` SELECT name , created_by FROM playlist WHERE created_by = 'jaydeep'; ```
+```sql SELECT name , created_by FROM playlist WHERE created_by = 'jaydeep'; ```
 ## Q.5 Open ChatGPT or Copilot and ask it to explain the difference between a table, a row, and a column in SQL using an example from a food delivery app like Zomato. Paste the explanation you receive into your assignment.
 -
 **Example:** 
