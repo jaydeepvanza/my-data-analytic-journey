@@ -1,9 +1,9 @@
 ## Q.1 create a new database named 'music_streaming_app' using the command line or GUI tool of your choice.
 ``` CREATE DATABASE music_streaming_app;```
 ## Q.2 Inside the 'music_streaming_app' database, create a table called 'playlists' with columns: playlist_id (integer, primary key), name (varchar), and created_by (varchar).
-- USE music_streaming_app;
+``` USE music_streaming_app;
 
-``` CREATE TABLE playlist (
+  CREATE TABLE playlist (
      playlist_id INT AUTO_INCREMENT PRIMARY KEY,
      name VARCHAR(50) NOT NULL,
      created_by VARCHAR(50) NOT NULL);
@@ -20,11 +20,12 @@
 ## Q.5 Open ChatGPT or Copilot and ask it to explain the difference between a table, a row, and a column in SQL using an example from a food delivery app like Zomato. Paste the explanation you receive into your assignment.
 - Sure. Think of a SQL database like a digital Excel spreadsheet used by a food-delivery app such as Zomato.
 
-*** Example:*** restaurants table
-restaurant_id	restaurant_name	city	rating
--- 101	Pizza Palace	Rajkot	4.5
-   102	Spice Hub	Ahmedabad	4.2
-   103	Burger Point	Surat	4.0
+*** Example: *** 
+-restaurants table
+- restaurant_id	restaurant_name	city	rating
+- 101	Pizza Palace	Rajkot	4.5
+- 102	Spice Hub	Ahmedabad	4.2
+- 103	Burger Point	Surat	4.0
 ***1. Table***
 
 - A table stores related information in a structured format.
