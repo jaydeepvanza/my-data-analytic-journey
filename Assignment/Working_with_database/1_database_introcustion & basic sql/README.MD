@@ -25,74 +25,99 @@
 - 101	Pizza Palace	Rajkot	4.5
 - 102	Spice Hub	Ahmedabad	4.2
 - 103	Burger Point	Surat	4.0<br>
-**1. Table**
+### **1. Table**
 
-- A table stores related information in a structured format.
+A **table** stores related information in a structured format.
 
-- Here, the entire restaurants table contains information about restaurants.
+Here, the entire `restaurants` table contains information about restaurants.
 
-```CREATE TABLE restaurants (
+```sql
+CREATE TABLE restaurants (
     restaurant_id INT,
     restaurant_name VARCHAR(100),
     city VARCHAR(50),
-    rating DECIMAL(2,1) );```
+    rating DECIMAL(2,1)
+);
+```
 
-- Think of a table = one complete spreadsheet.<br>
+Think of a **table** as one complete spreadsheet.
 
-**2. Column**<br>
+---
 
-- A column represents one type/category of information.
+### **2. Column**
 
-- For example:
+A **column** represents one type or category of information.
 
--restaurant_id
--restaurant_name
--city
--rating
+For example:
 
-- Each column has a specific purpose.
+- `restaurant_id`
+- `restaurant_name`
+- `city`
+- `rating`
 
-- Column	Meaning
-restaurant_id	Unique ID of restaurant
-restaurant_name	Restaurant's name
-city	Restaurant's city
-rating	Restaurant rating
+Each column has a specific purpose.
 
-- Think of a column = one field/attribute.
+| Column | Meaning |
+|---|---|
+| `restaurant_id` | Unique ID of the restaurant |
+| `restaurant_name` | Restaurant's name |
+| `city` | Restaurant's city |
+| `rating` | Restaurant's rating |
 
-***3. Row***
+Think of a **column** as one field or attribute.
 
-- A row represents one complete record.
+---
 
-***example:***
+### **3. Row**
 
-**101 | Pizza Palace | Rajkot | 4.5**
+A **row** represents one complete record.
 
-- This is one row, representing one restaurant.
+**Example:**
 
-- Another row:
+```text
+101 | Pizza Palace | Rajkot | 4.5
+```
 
-**102 | Spice Hub | Ahmedabad | 4.2**
+This is one row representing one restaurant.
 
- -represents another restaurant.
+Another row:
 
-- Think of a row = one complete record.
+```text
+102 | Spice Hub | Ahmedabad | 4.2
+```
 
-- Easy way to remember
+This represents another restaurant.
 
+Think of a **row** as one complete record.
 
-**TABLE**<br>
+---
 
-├── COLUMN → What information are we storing?<br>
-├── COLUMN → restaurant_name<br>
-├── COLUMN → city<br>
-├── COLUMN → rating<br>
+### **Easy Way to Remember**
+
+```text
+TABLE
 │
-├── ROW → One restaurant's complete information<br>
-├── ROW → Another restaurant's complete information<br>
+├── COLUMN → What information are we storing?
+│   ├── restaurant_id
+│   ├── restaurant_name
+│   ├── city
+│   └── rating
+│
+├── ROW → One restaurant's complete information
+│
+└── ROW → Another restaurant's complete information
+```
 
--In one sentence:
+---
 
-- A table is a collection of related data, a column represents a specific type of data, and a row represents one complete record.<br>
+### **In One Sentence**
 
-- For a Zomato-style database, you might eventually have separate tables such as restaurants, customers, orders, menu_items, and payments.
+> A **table** is a collection of related data, a **column** represents a specific type of data, and a **row** represents one complete record.
+
+For a Zomato-style database, you might eventually have separate tables such as:
+
+- `restaurants`
+- `customers`
+- `orders`
+- `menu_items`
+- `payments`
