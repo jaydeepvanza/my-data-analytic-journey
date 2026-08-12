@@ -16,8 +16,7 @@
 ```
 ## Q.4 Write an SQL SELECT query to display all playlists created by the user 'anyone_name' from the 'playlists' 
 
-```sql SELECT name , created_by FROM playlist
-WHERE created_by = 'jaydeep';```
+```sql SELECT name , created_by FROM playlist WHERE created_by = 'jaydeep';```
 ## Q.5 Open ChatGPT or Copilot and ask it to explain the difference between a table, a row, and a column in SQL using an example from a food delivery app like Zomato. Paste the explanation you receive into your assignment.
 -
 **Example:** 
