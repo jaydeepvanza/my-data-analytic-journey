@@ -18,30 +18,28 @@
 
 ``` SELECT name , created_by FROM playlist WHERE created_by = 'jaydeep'; ```
 ## Q.5 Open ChatGPT or Copilot and ask it to explain the difference between a table, a row, and a column in SQL using an example from a food delivery app like Zomato. Paste the explanation you receive into your assignment.
-- Sure. Think of a SQL database like a digital Excel spreadsheet used by a food-delivery app such as Zomato.
-
-*** Example: *** 
--restaurants table
+-
+**Example:** 
+- restaurants table
 - restaurant_id	restaurant_name	city	rating
 - 101	Pizza Palace	Rajkot	4.5
 - 102	Spice Hub	Ahmedabad	4.2
-- 103	Burger Point	Surat	4.0
-***1. Table***
+- 103	Burger Point	Surat	4.0<br>
+**1. Table**
 
 - A table stores related information in a structured format.
 
 - Here, the entire restaurants table contains information about restaurants.
-```
-CREATE TABLE restaurants (
+
+```CREATE TABLE restaurants (
     restaurant_id INT,
     restaurant_name VARCHAR(100),
     city VARCHAR(50),
-    rating DECIMAL(2,1)
-);```
+    rating DECIMAL(2,1) );```
 
-- Think of a table = one complete spreadsheet.
+- Think of a table = one complete spreadsheet.<br>
 
-***2. Column**
+**2. Column**<br>
 
 - A column represents one type/category of information.
 
@@ -68,13 +66,13 @@ rating	Restaurant rating
 
 ***example:***
 
-``` 101 | Pizza Palace | Rajkot | 4.5 ```
+**101 | Pizza Palace | Rajkot | 4.5**
 
 - This is one row, representing one restaurant.
 
 - Another row:
 
-- 102 | Spice Hub | Ahmedabad | 4.2
+**102 | Spice Hub | Ahmedabad | 4.2**
 
  -represents another restaurant.
 
@@ -83,7 +81,7 @@ rating	Restaurant rating
 - Easy way to remember
 
 
-***TABLE***<br>
+**TABLE**<br>
 
 ├── COLUMN → What information are we storing?<br>
 ├── COLUMN → restaurant_name<br>
