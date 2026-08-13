@@ -7,6 +7,7 @@ song_name VARCHAR(255) ,
 artist VARCHAR(100),
 duration INT);
 ```
+- insert
 ```sql INSERT INTO playlist (song_name,artist ,duration) 
 VALUES  ( 'Maa (Main Kabhi Batlata Nahin)','Shankar Mahadevan',310);
 ```
