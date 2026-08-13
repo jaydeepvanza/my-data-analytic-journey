@@ -32,3 +32,9 @@ ORDER BY release_year DESC, rating DESC;
 SELECT Name FROM restaurants
 ORDER BY name LIMIT 10;
 ```
+## **Q.5 Suppose you want to display the top 3 trending songs from a 'songs' table based on play_count, but if two songs have the same play_count, the more recently added song should come first. Write the SQL query to achieve this.**
+
+```sql
+SELECT song_name ,added_date, Play_count FROM songs
+ORDER BY Play_count DESC ,added_date DESC LIMIT 3 ;
+```
