@@ -16,11 +16,19 @@ SELECT title, release_year, rating FROM movies
 ORDER BY release_year DESC, rating DESC;
 ```
 
-**RESULT
-| title     | release_year | rating |
-| -------   | -----------: | -----: |
-| `Movie A` |         2026 |    9.2 |
-| `Movie B` |         2026 |    8.5 |
-| `Movie C` |         2025 |    9.5 |
-| `Movie D` |         2025 |    7.8 |
-| `Movie E` |         2024 |    8.9 |
+**RESULT**
+
+| title   | release_year | rating |
+| ------- | -----------: | -----: |
+| Movie A |         2026 |    9.2 |
+| Movie B |         2026 |    8.5 |
+| Movie C |         2025 |    9.5 |
+| Movie D |         2025 |    7.8 |
+| Movie E |         2024 |    8.9 |
+
+## **Q.4 Write an SQL query to display the first 10 restaurants from a 'restaurants' table, sorted alphabetically by name, just like Zomato's A-Z listing.**
+
+```sql
+SELECT Name FROM restaurants
+ORDER BY name LIMIT 10;
+```

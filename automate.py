@@ -21,7 +21,7 @@ def add():
   return False
 
 def commit_push():
-  messgge = input("enter your commitment messgae")
+  messgge = input("enter your commitment messgae:  ")
   subprocess.run(["git","commit","-m",messgge],check=True)
   print("your file commited successfully")
   try:
