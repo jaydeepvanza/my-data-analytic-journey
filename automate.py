@@ -6,7 +6,7 @@ def add():
   option = input("Add all files or a particular file?  (all/p)").lower()
   if option == "p":
    file = input("enter file name").lower()
-   subprocess.run(["git","add", file,'/'],check=True)
+   subprocess.run(["git","add", file],check=True)
    print(f"{file} added successfully")
    return True
   elif option =="all": 
