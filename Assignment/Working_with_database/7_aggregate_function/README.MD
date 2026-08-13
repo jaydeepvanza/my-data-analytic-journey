@@ -6,7 +6,7 @@ CREATE TABLE Orders (
     user_name VARCHAR(70) NOT NULL,
     total_amount DECIMAL(10,2),
     order_date DATE 
-)
+);
 ```
 ```sql
 INSERT INTO Orders (user_name, total_amount, order_date)
@@ -40,7 +40,8 @@ MIN(total_amount) AS Lowest_amount_order FROM Orders;
 ```sql
 SELECT SUM(total_amount) AS total_sales FROM Orders;
 ```
-- ** As Per Question Use a WHERE clause to filter out NULL values before applying the SUM function.**
+- **As Per Question Use a WHERE clause to filter out NULL values before applying the SUM function.**
+
 ```sql
 SELECT SUM(total_amount) AS total_sales FROM Orders
 WHERE total_amount IS NOT NULL ;
