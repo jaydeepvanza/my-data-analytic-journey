@@ -1,5 +1,5 @@
 ## Q.1 Create a table called Playlist with columns: id (INT, primary key), song_name (VARCHAR), artist (VARCHAR), and  duration  (INT, seconds). Insert a single row for your current favorite song.
-
+`
 ```sql USE foodie_app ;```
 ```sql CREATE TABLE playlist (
 id INT AUTO_INCREMENT	PRIMARY KEY,
