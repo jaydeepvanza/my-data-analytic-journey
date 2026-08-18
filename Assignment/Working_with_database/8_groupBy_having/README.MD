@@ -66,7 +66,7 @@ WHERE amount > 100
 GROUP BY payment_method HAVING AVG(amount) > 300;
 ```
 ## **execution concept**
-
+```
 1. FROM Orders
        ↓
 2. WHERE amount > 100
@@ -84,14 +84,8 @@ GROUP BY payment_method HAVING AVG(amount) > 300;
 5. HAVING AVG(amount) > 300
        ↓
    Keep only groups with average > 300
-
+```
    
-## **Difference between WHERE and HAVING**
-Filter Rows                             | Filter Groups
-Use Before GROUP BY                     | Use After GROUP BY
-Normally Use With Induvidual Column     | Commonly Use With Aggregate Function 
-Cannot Use Aggregate Functions Directly | Can Use Aggregate Functions
-
 ## Difference Between WHERE and HAVING
 
 | WHERE | HAVING |
