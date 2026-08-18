@@ -91,3 +91,12 @@ Filter Rows                             | Filter Groups
 Use Before GROUP BY                     | Use After GROUP BY
 Normally Use With Induvidual Column     | Commonly Use With Aggregate Function 
 Cannot Use Aggregate Functions Directly | Can Use Aggregate Functions
+
+## Difference Between WHERE and HAVING
+
+| WHERE | HAVING |
+|---|---|
+| Filters **Rows** | Filters **Groups** |
+| Used **Before `GROUP BY`** | Used **After `GROUP BY`** |
+| Normally used with **individual columns** | Commonly used with **aggregate functions** |
+| Cannot use aggregate functions directly | Can use aggregate functions |
