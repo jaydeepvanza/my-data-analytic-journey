@@ -46,6 +46,7 @@ GROUP BY payment_method HAVING AVG(amount) > 300;
 ```
 ## **Explain the difference between WHERE and HAVING by giving one example query for each, using the Orders table. Your examples should show a scenario where WHERE and HAVING filter different things.**
 
+## Difference Between WHERE and HAVING
 *WHERE Filter data according to contion on before gruop by*
 ```sql
 SELECT * FROM Orders
@@ -57,8 +58,7 @@ WHERE amount > 300;
 SELECT payment_method , AVG(amount) FROM Orders
 GROUP BY payment_method HAVING AVG(amount) > 300;
 ```
-
-## **We can use WHERE and HAVING togather**
+**We can use WHERE and HAVING togather**
 
 ```sql
 SELECT payment_method , AVG(amount) FROM Orders
@@ -85,8 +85,7 @@ GROUP BY payment_method HAVING AVG(amount) > 300;
        ↓
    Keep only groups with average > 300
 ```
-   
-## Difference Between WHERE and HAVING
+
 
 | WHERE | HAVING |
 |---|---|
