@@ -75,7 +75,7 @@ RIGHT JOIN dishes d
 ON r.id = d.restaurant_id ; 
 ```
 
-## 5.Given this scenario: You want to show a list of all playlists and the songs inside them, like Spotify. Explain which JOIN type (INNER, LEFT, or RIGHT) you would use to show all playlists, even if some are empty, and write the SQL query for it.
+## Given this scenario: You want to show a list of all playlists and the songs inside them, like Spotify. Explain which JOIN type (INNER, LEFT, or RIGHT) you would use to show all playlists, even if some are empty, and write the SQL query for it.
 
 - I use `INNER JOIN` beacause of we wan't all playlist even list is empty
 
