@@ -147,3 +147,59 @@ SELECT
 FROM pizza_sales
 GROUP BY order_day
 ORDER BY total_order DESC;
+
+
+## **joins**
+- *INNER JOIN*
+```sql 
+FROM A
+LEFT JOIN B
+ON A.id = B.i
+```
+- keep only matching from both table
+*LEFT JOIN*
+```sql SELECT *
+FROM A
+LEFT JOIN B
+ON A.id = B.i
+```
+- keep all record from table A + matching from table B
+
+*RIGHT JOIN*
+```sql
+SELECT *
+FROM A
+RIGHT JOIN B
+ON A.id = B.id;
+```
+- keep all record from table B + matching from table A
+*FULL JOIN*
+## we use this in mysql & MarianaBD
+
+```sql SELECT *
+FROM A
+LEFT JOIN B
+ON A.id = B.id
+
+UNION
+
+SELECT *
+FROM A
+RIGHT JOIN B
+ON A.id = B.id;
+```
+
+```sql
+SELECT *
+FROM A
+FULL OUTER JOIN B
+ON A.id = B.id;
+```
+| `Database`     | `FULL OUTER JOIN`  |
+| -------------- | -------------------|
+| **PostgreSQL** | ✅ Yes             |
+| **SQL Server** | ✅ Yes             |
+| **Oracle**     | ✅ Yes             |
+| **IBM Db2**    | ✅ Yes             |
+| **MySQL**      | ❌ No              |
+| **MariaDB**    | ❌ No              |
