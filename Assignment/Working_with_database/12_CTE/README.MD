@@ -1,4 +1,4 @@
-1. # Create a CTE using the WITH clause to select all products with a rating above 4.5 from a 'Products' table, similar to how Flipkart or Myntra might highlight top-rated items.
+# 1.  Create a CTE using the WITH clause to select all products with a rating above 4.5 from a 'Products' table, similar to how Flipkart or Myntra might highlight top-rated items.
 
 ```sql
 WITH all_product AS (
@@ -7,7 +7,7 @@ WITH all_product AS (
 SELECT * FROM all_product ;
 ```
 
-2. # Rewrite a query that finds all restaurants in 'Ahmedabad' with delivery charges under 50 from a 'Restaurants' table, first using a subquery and then using a CTE. Compare both queries for readability.>
+# 2.  Rewrite a query that finds all restaurants in 'Ahmedabad' with delivery charges under 50 from a 'Restaurants' table, first using a subquery and then using a CTE. Compare both queries for readability.>
 - *Subquery*
 
 ```sql
@@ -27,7 +27,7 @@ SELECT * FROM ahmd_del_under50;
 
 - We see here `CTE` is more readable
 
-3. # Using two CTEs in a single query, find the top 3 most-followed users and the top 3 most-liked posts from a 'Users' and 'Posts' table (think Instagram-style data). Output both lists in the same result set.
+# 3. Using two CTEs in a single query, find the top 3 most-followed users and the top 3 most-liked posts from a 'Users' and 'Posts' table (think Instagram-style data). Output both lists in the same result set.
 
 ```sql
 WITH most_followed as (
@@ -42,7 +42,7 @@ UNION
 SELECT post_name , likes FROM most_liked ;
 ```
 
-4. # Write a recursive CTE that generates a list of dates for the next 7 days starting from today, similar to how BookMyShow shows available dates for movie bookings.<br><br><em><strong>Hint:</strong> Use a base case for today and recursion to add one day at a time.</em>
+# 4. Write a recursive CTE that generates a list of dates for the next 7 days starting from today, similar to how BookMyShow shows available dates for movie bookings.<br><br><em><strong>Hint:</strong> Use a base case for today and recursion to add one day at a time.</em>
 
 ```sql
 WITH RECURSIVE seven_days AS 
@@ -55,7 +55,7 @@ WHERE today < CURDATE() + INTERVAL + 6 DAY
 SELECT * FROM seven_days
 ```
 
-5. # Given a messy SQL query that finds all users with more than 1000 followers from a 'Users' table, refactor it to use a CTE for better clarity and maintainability.
+# 5. Given a messy SQL query that finds all users with more than 1000 followers from a 'Users' table, refactor it to use a CTE for better clarity and maintainability.
 
 ```sql
 WITH follower_morethan_1k AS (
