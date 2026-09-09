@@ -203,3 +203,11 @@ ON A.id = B.id;
 | **IBM Db2**    | ✅ Yes             |
 | **MySQL**      | ❌ No              |
 | **MariaDB**    | ❌ No              |
+
+
+# COALESCE 
+```SQL
+SELECT username , COALESCE(SUM(amount),0) AS total_order_amount
+FROM users
+-- use to replace null value with another value 
+```
