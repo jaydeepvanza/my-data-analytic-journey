@@ -300,10 +300,10 @@ FROM A
 RIGHT JOIN B;
 ```
 - result is 
-<p>red s , red m, red l , blue s , blue m, blue l </p>
+- red s , red m, red l , blue s , blue m, blue l 
 # self join
 | `id`     | `emp name`  | `manager_id` |
-| -------  |------------ |--------------|
+|----------|-------------|--------------|
 | 1        | jay         | 1            |
 | 2        | deep        | 3            |
 | 3        | vanza       | 1            |
@@ -317,10 +317,10 @@ on a.manager_id = m.id
 ```
 - result 
 | `id`     | `employe_name`  | `manager_name` |
-| ---------|-----------------|----------------|
-| 1      | jay   | jay|
-| 2   | deep  | vanza|
-| 3   | vanza | jay|
+|----------|-----------------|----------------|
+| 1        | jay             | jay            |
+| 2        | deep            | vanza          |
+| 3        | vanza           | jay            |
 
 
 ## *Module 7: Subqueries*
