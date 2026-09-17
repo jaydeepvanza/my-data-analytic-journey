@@ -315,9 +315,10 @@ FROM emp a
 join emp m
 on a.manager_id = m.id
 ```
-- result 
+# result 
+
 | `id`     | `employe_name`  | `manager_name` |
-|----------|-----------------|----------------|
+|----|----|----|
 | 1        | jay             | jay            |
 | 2        | deep            | vanza          |
 | 3        | vanza           | jay            |
