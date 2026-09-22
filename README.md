@@ -805,3 +805,28 @@ SELECT
     END AS category
 FROM employee;
 ```
+
+
+
+
+## ---------- PYTHON --------------------------
+
+1. Python is a high-level, beginner-friendly programming language. It is known for its simple and readable syntax
+- - Interpreted language, so code runs line by line
+| Interpreter                   | Compiler                             |
+| ----------------------------- | ------------------------------------ |
+| Line-by-line execution        | Whole program compiled first         |
+| Usually slower execution      | Usually faster execution             |
+| Errors found during execution | Many errors found during compilation |
+| Python                        | C/C++                                |
+
+
+2. Versatile
+Python can be used for (with library) :
+- Web development
+- Data analysis
+- Machine learning
+- Artificial intelligence
+- Automation
+- Game development
+- Scientific computing
