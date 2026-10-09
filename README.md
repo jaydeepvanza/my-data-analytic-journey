@@ -331,6 +331,11 @@ Purpose: Write queries inside queries.
 SELECT * FROM emp WHERE salary <(
 SELECT MAX(salary) FROM emp);
 ```
+```sql
+-- second highest salary without limit
+select username, salary from users where salary =(select max(salary) from users where salary < (select max(salary)from users) );
+-- if non aggrigate column select with aggrigate then group by is needed else not needed
+```
 - nested subquery
 ```sql
 SELECT * FROM emp WHERE salary <(
@@ -809,18 +814,18 @@ FROM employee;
 
 
 
-## ---------- PYTHON --------------------------
+## -------------------- PYTHON --------------------------
 
 1. Python is a high-level, beginner-friendly programming language. It is known for its simple and readable syntax
 - - Interpreted language, so code runs line by line
-```
+
 | Interpreter                   | Compiler                             |
 | ----------------------------- | ------------------------------------ |
 | Line-by-line execution        | Whole program compiled first         |
 | Usually slower execution      | Usually faster execution             |
 | Errors found during execution | Many errors found during compilation |
 | Python                        | C/C++                                |
-```
+
 
 2. Versatile
 Python can be used for (with library) :

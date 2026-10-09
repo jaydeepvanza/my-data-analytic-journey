@@ -21,7 +21,7 @@ HAVING AVG(salary) = (
     ) AS dept_avg
 );
 
---- **using join highest pain employee in each dept ** -- join quaries
+--- **using join highest paid employee in each dept ** -- join quaries
 SELECT e.employee_name,
        e.department,
        e.salary
