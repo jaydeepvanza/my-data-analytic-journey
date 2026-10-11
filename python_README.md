@@ -426,7 +426,7 @@ if age >= 18:
 
 ---------------------------------------------------------------
 
-2. Variables
+## 2. Variables
 
 
 ## 2.1 What is a Variable?
@@ -1337,6 +1337,7 @@ print(result)
 <<  → Shift LEFT
 >>  → Shift RIGHT
 ```
+
 ```python
 a = 5      # 101
 b = 3      # 011
@@ -1359,8 +1360,8 @@ print(a>>2) # a ÷ 2ⁿ → 5 ÷ 2²
 ```
 
 ## how binaty calculate
-text | Bit 1 | Bit 2 | Result |
-| ----: | ----: | -----: |
+| Bit 1 | Bit 2 | Result |
+| ----: | ----: | ----: |
 |     0 |     0 |      0 |
 |     0 |     1 |  **1** |
 |     1 |     0 |  **1** |
@@ -2279,31 +2280,237 @@ PART 4 — ERROR HANDLING
 ----------------------------------------
 
 40. Errors vs Exceptions
-41. try
-42. except
-43. Multiple Exceptions
-44. else
-45. finally
-46. raise
-47. Custom Exceptions
 
+# 40. Errors vs Exceptions
 
+Python programs can face problems while running. These are commonly handled as **errors** or **exceptions**.
+
+## 1. Error
+
+An error is a problem that prevents the program from running correctly.
+
+Example:
+
+```python
+print("Hello"
+```
+
+This causes a **SyntaxError** because the syntax is incomplete.
+
+## 2. Exception
+
+An exception occurs **during program execution**.
+
+Example:
+
+```python
+a = 10
+b = 0
+
+print(a / b)
+```
+
+Output:
+
+```text
+ZeroDivisionError
+```
+
+The syntax is correct, but Python cannot divide by zero.
+
+## Common Exceptions
+
+| Exception | Example |
+|---|---|
+| `ZeroDivisionError` | `10 / 0` |
+| `ValueError` | `int("hello")` |
+| `TypeError` | `"10" + 5` |
+| `IndexError` | `list[10]` |
+| `KeyError` | `dict["missing"]` |
+| `NameError` | Using an undefined variable |
+
+## Important Difference
+
+```text
+Error       → problem in the program
+Exception   → problem that occurs during execution
+```
+
+Exceptions can be handled using:
+
+```python
+try:
+    # risky code
+except:
+    # handle exception
+```
+---
+41. try, except , Multiple Exceptions , else , finally
+
+```python
+try:
+    number = int(input("Enter a number to calculate its factorial: ")) 
+    result = 10/number 
+except ValueError:
+    print("Invalid input. Please enter a valid integer.")
+except ZeroDivisionError:     
+       print("cannot divide by zero")
+else:
+# The else block runs only when no exception occurs in the try block.
+  print( result)
+finally: 
+# finally is a block that always runs, whether an exception occurs or not.
+    print("Execution completed.")
+```
+it not stop the program accept it and run next step 
+---
+42. raise
+
+Python detects an exception → automatically
+
+raise → programmer intentionally triggers an exception
+
+```python
+try:
+    age = int(input("Enter your age: "))
+
+    if age < 18:
+        raise ValueError("Age must be 18 or above")
+
+    print("Eligible")
+
+except ValueError as e:
+    print(e)
+```
+42. Custom Exceptions
+
+A custom exception is an exception created by the programmer for a specific situation.
+
+```python
+class   MyCustomError(Exception):
+    pass
+try:
+     age = int(input("Enter your age: "))
+ 
+     if age < 18:
+         raise MyCustomError("Age must be 18 or above")
+
+     print("Eligible")
+except MyCustomError as e:
+     print(f"MyCustomError: {e}")
+```
+---
 PART 5 — MODULES & PACKAGES
 ----------------------------------------
 
-48. Modules
-49. import
-50. from ... import
-51. Built-in Modules
-52. Creating Your Own Module
-53. Packages
-54. __name__ == "__main__"
+43. Modules
 
+A module is a Python file (.py) that contains code such as functions, variables, and classes that can be reused in another Python program.
+* Reuse code
+* Organize code
+* Keep programs clean
+* Avoid writing the same code again
+
+- example
+```python
+#Create a file called:
+#math_tools.py
+
+def add(a, b):
+    return a + b
+
+def multiply(a, b):
+    return a * b
+```
+```python
+# Now create another file:
+# main.py
+import math_tools
+
+print(math_tools.add(10, 20)) # 30
+print(math_tools.multiply(5, 4)) # 20
+```
+- Python provides many built-in modules that contain ready-made functions and tools
+# common in-built modules
+
+| Module | Purpose |
+|---|---|
+| `math` | Mathematics |
+| `random` | Random values |
+| `datetime` | Date and time |
+| `os` | Operating system |
+| `sys` | Python/system information |
+| `json` | JSON data |
+| `re` | Regular expressions |
+| `sqlite3` | SQLite database |
+
+---
+44. import , from ... import
+
+import is used to bring a module into your Python program so you can use its code.
+```python
+# import full module
+import math as m
+# impoer specific module
+# from module import item
+from math import sqrt, factorial
+print(m.sqrt(25)) # 5
+```
+---
+
+45. Packages
+
+A package is a folder that contains related Python modules.
+## 1. Package Structure
+
+```text
+project/
+│
+├── main.py
+│
+└── tools/
+    ├── __init__.py
+    ├── math_tools.py
+    └── string_tools.py
+```
+
+Here:
+
+```text
+tools/          → package
+math_tools.py   → module
+string_tools.py → module
+```
+```python
+from tools.math_tools import add
+
+print(add(10, 20))
+```
+---
+46. __name__ == "__main__"
+
+__name__ is a special Python variable.
+When a Python file is run directly, Python sets:
+```text
+__name__ == "__main__"
+```
+
+```python
+def greet(num):
+    print(num ** 2)
+
+
+if __name__ == "__main__":
+   # for testing purpose programer run this code
+    greet(5)
+```    
+if we not use `if __name__ == "__main__"` then greet(5) it run automatically when some one import this module
+run code below `if __name__ == "__main__"` only when is run locally & in not run if run somewhere else after import
 
 PART 6 — FILE HANDLING
 ----------------------------------------
 
-55. File Handling
+55. File Handling   
 56. Reading Files
 57. Writing Files
 58. Appending Files
